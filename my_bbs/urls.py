@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from bbs.views import ThreadList, ThreadDetail, ThreadCreate
+from bbs.views import ThreadList, ThreadDetail, ThreadCreate, ResponseCreate
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^bbs/$', ThreadList.as_view()),
     url(r'^bbs/(?P<pk>\d+)/$', ThreadDetail.as_view()),
     url(r'^bbs/create', ThreadCreate.as_view()),
+    url(r'^bbs/(?P<thread_id>\d+)/response/create', ResponseCreate.as_view()),
 ]
