@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from bbs.views import ThreadList
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^bbs/$', ThreadList.as_view()),
 ]

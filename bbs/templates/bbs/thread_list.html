@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>スレッド一覧</title>
+</head>
+<body>
+  <h1>スレッド一覧</h1>
+  {% for thread in thread_list %}
+    {{ thread.title }}: {{ thread.created_time }} <br>
+  {% endfor %}
+</body>
+</html>
