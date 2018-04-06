@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Thread, Response
+
+
+@admin.register(Thread)
+class ThreadAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Response)
+class ResponseAdmin(admin.ModelAdmin):
+    pass
