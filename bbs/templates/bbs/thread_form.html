@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>スレッド作成</title>
+</head>
+<body>
+  <h1>スレッド作成</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="投稿">
+  </form>
+</body>
+</html>

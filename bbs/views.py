@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Thread
 
@@ -14,3 +14,9 @@ class ThreadDetail(DetailView):
         context = super().get_context_data(**kwargs)
         context['response_list'] = context['thread'].response_set.all()
         return context
+
+
+class ThreadCreate(CreateView):
+    model = Thread
+    fields = '__all__'
+    success_url = '/bbs'
