@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ thread.title }}</title>
+</head>
+<body>
+  <h1>{{ thread.title }}</h1>
+  {% for response in response_list %}
+    {{ response.contributor_name }}: {{ response.created_time }}<br>
+    {{ response.content }}<br>
+  {% endfor %}
+</body>
+</html>
